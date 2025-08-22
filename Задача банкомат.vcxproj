@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="checking_entered_commands.cpp" />
+    <ClCompile Include="money_transfer.cpp" />
     <ClCompile Include="user_data_verification.cpp" />
     <ClCompile Include="Задача банкомат.cpp" />
   </ItemGroup>
