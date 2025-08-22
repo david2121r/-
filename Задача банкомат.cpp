@@ -30,10 +30,10 @@ int main()
         5236,9534,5482,9042,3718,5085
     };
     int Balance_on_the_card[6] {
-        100,564,942,975,0,532
+        100,564,942,975,10,532
     };
     int Cash_balance[6]{
-        100,231,62,36,0,109
+        100,231,62,36,11102,109
     };
 
     while (true)
@@ -74,6 +74,8 @@ int main()
                         std::cout << "enter the amount: ";
                         std::cin >> amount;
 
+                        std::cin.ignore();
+
                         if (Cash_balance[id] >= amount)
                         {
                             Cash_balance[id] -= amount;
@@ -90,6 +92,8 @@ int main()
                     case(1):
                         std::cout << "enter the amount: ";
                         std::cin >> amount;
+
+                        std::cin.ignore();
 
                         if (Balance_on_the_card[id] >= 0 && Balance_on_the_card[id] >= amount)
                         {
@@ -125,6 +129,9 @@ int main()
                         return 0;
 
                     default:
+
+                        std::cin.ignore();
+
                         std::cout << "Incorrectly entered command\n";
                 }
             }
