@@ -76,12 +76,13 @@ int main()
                 std::cout << (choice == 1 ? "->\u001b[31m" : "   ") << "enter money \u001b[0m \n";
                 std::cout << (choice == 2 ? "->\u001b[31m" : "   ") << "withdraw money \u001b[0m \n";
                 std::cout << (choice == 3 ? "->\u001b[31m" : "   ") << "transfer money \u001b[0m \n";
-                std::cout << (choice == 4 ? "->\u001b[31m" : "   ") << "exit \u001b[0m \n";
+                std::cout << (choice == 4 ? "->\u001b[31m" : "   ") << "Show balance \u001b[0m \n";
+                std::cout << (choice == 5 ? "->\u001b[31m" : "   ") << "exit \u001b[0m \n";
 
                 key = _getch();
 
                 if (key == 72 && choice > 1) choice--;
-                if (key == 80 && choice < 4) choice++;
+                if (key == 80 && choice < 5) choice++;
 
             }
 
@@ -173,11 +174,24 @@ int main()
                 break;
 
             case(4):
+                system("cls");
+
+                std::cout << "hello " << Client_names[id] << " You have " << Balance_on_the_card[id] << " dollars\n";
+                std::cout << "and you have " << Cash_balance[id] << " cash";
+
+                std::this_thread::sleep_for(std::chrono::seconds(3));
+
+                break;
+            case(5):
                 return 0;
             }
         }
         else
-            std::cout << "Invalid code or card number\n";
+            {
+                std::cout << "Invalid code or card number\n";
+                std::this_thread::sleep_for(std::chrono::seconds(3));
+                break;
+            }
 
     }
 }
