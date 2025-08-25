@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="checking_entered_commands.cpp" />
-    <ClCompile Include="money_transfer.cpp" />
-    <ClCompile Include="user_data_verification.cpp" />
     <ClCompile Include="Задача банкомат.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
