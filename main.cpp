@@ -73,10 +73,10 @@ int main()
 
                 std::cout << "select option: \n";
 
-                std::cout << (choice == 1 ? "->" : "   ") << "enter money \n";
-                std::cout << (choice == 2 ? "->" : "   ") << "withdraw money \n";
-                std::cout << (choice == 3 ? "->" : "   ") << "transfer money \n";
-                std::cout << (choice == 4 ? "->" : "   ") << "exit \n";
+                std::cout << (choice == 1 ? "->\u001b[31m" : "   ") << "enter money \u001b[0m \n";
+                std::cout << (choice == 2 ? "->\u001b[31m" : "   ") << "withdraw money \u001b[0m \n";
+                std::cout << (choice == 3 ? "->\u001b[31m" : "   ") << "transfer money \u001b[0m \n";
+                std::cout << (choice == 4 ? "->\u001b[31m" : "   ") << "exit \u001b[0m \n";
 
                 key = _getch();
 
